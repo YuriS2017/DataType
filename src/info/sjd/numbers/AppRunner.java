@@ -14,6 +14,7 @@ public class AppRunner {
 		int secondMultiplayer = 9999;
 		
 		logger.info("Summa numbers: " + findSum(number));
+		logger.info("Amount of characters: " + amountCharacter(number));
 		logger.info("Max number palindrom " + findMaxPalindrom(firstMultiplayer, secondMultiplayer));
 		
 	}
@@ -26,6 +27,20 @@ public class AppRunner {
 			number = number / 10;
 		}
 		return sum + number;
+	}
+	
+	public static int amountCharacter(int number) {
+		
+		char[] numbers = String.valueOf(number).toCharArray();
+		int sum = 0;
+		
+		for(Character character : numbers) {
+			if(character != null) {
+				sum += character;
+			}
+		}
+		
+		return sum;
 	}
 	
 	public static long findMaxPalindrom(int firstMultiplayer, int secondMultiplayer) {
