@@ -36,7 +36,7 @@ public class AppRunner {
 		
 		for(Character character : numbers) {
 			if(character != null) {
-				sum += character;
+				sum += Character.getNumericValue(character);
 			}
 		}
 		
